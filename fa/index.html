@@ -13,10 +13,15 @@
       padding: 0;
     }
 
-    .section {
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
       padding: 40px 20px;
+    }
+
+    .section {
       text-align: center;
-      border-bottom: 1px solid #ccc;
     }
 
     .glass-button {
@@ -35,16 +40,14 @@
     }
 
     .button-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
       gap: 12px;
       max-width: 600px;
       margin: 0 auto;
     }
 
     .button-grid button {
-      flex: 0 0 calc(50% - 12px);
       padding: 14px;
       font-size: 16px;
       border: none;
@@ -62,60 +65,64 @@
 </head>
 <body>
 
-  <!-- بخش قلیان -->
-  <div class="section">
-    <div class="glass-button">قلیان</div>
-    <div class="button-grid">
-      <button>دوسیب الموت</button>
-      <button>دو سیب شیرین</button>
-      <button>دو سیب نخل</button>
-      <button>دوسیب نعناع</button>
-      <button>دوسیب آلبالو</button>
-      <button>دوسیب شلیل</button>
-      <button>سیب یخ</button>
-      <button>نعناع یخ</button>
-      <button>هندوانه یخ</button>
-      <button>لیمو نعنا</button>
-      <button>پرتغال نعنا</button>
-      <button>پرتغال خامه</button>
-      <button>آدامس دارچین</button>
-      <button>انبه</button>
-      <button>شیر انبه</button>
-      <button>آلبالو</button>
-      <button>آلبالو نعناع</button>
-      <button>انگور</button>
-      <button>انگور نعنا</button>
-      <button>بلوبری</button>
-      <button>مافیا</button>
-    </div>
-  </div>
+  <div class="container">
 
-  <!-- بخش خوراک -->
-  <div class="section">
-    <div class="glass-button">خوراک</div>
-    <div class="button-grid">
-      <button>املت</button>
-      <button>نیمرو</button>
-      <button>کباب تابه‌ای</button>
-      <button>بندری</button>
-      <button>سیب ساده</button>
-      <button>سیب ویژه</button>
-      <button>هات داگ سیب‌زمینی</button>
+    <!-- بخش قلیان -->
+    <div class="section">
+      <div class="glass-button">قلیان</div>
+      <div class="button-grid">
+        <button>دوسیب الموت</button>
+        <button>دو سیب شیرین</button>
+        <button>دو سیب نخل</button>
+        <button>دوسیب نعناع</button>
+        <button>دوسیب آلبالو</button>
+        <button>دوسیب شلیل</button>
+        <button>سیب یخ</button>
+        <button>نعناع یخ</button>
+        <button>هندوانه یخ</button>
+        <button>لیمو نعنا</button>
+        <button>پرتغال نعنا</button>
+        <button>پرتغال خامه</button>
+        <button>آدامس دارچین</button>
+        <button>انبه</button>
+        <button>شیر انبه</button>
+        <button>آلبالو</button>
+        <button>آلبالو نعناع</button>
+        <button>انگور</button>
+        <button>انگور نعنا</button>
+        <button>بلوبری</button>
+        <button>مافیا</button>
+      </div>
     </div>
-  </div>
 
-  <!-- بخش نوشیدنی‌ها -->
-  <div class="section">
-    <div class="glass-button">نوشیدنی‌ها</div>
-    <div class="button-grid">
-      <button>زمزم مشکی</button>
-      <button>زمزم زرد</button>
-      <button>ماشعیر تلخ</button>
-      <button>ماشعیر لیمویی</button>
-      <button>دوغ آبعلی</button>
-      <button>سون آپ</button>
-      <button>آب معدنی</button>
+    <!-- بخش خوراک -->
+    <div class="section">
+      <div class="glass-button">خوراک</div>
+      <div class="button-grid">
+        <button>املت</button>
+        <button>نیمرو</button>
+        <button>کباب تابه‌ای</button>
+        <button>بندری</button>
+        <button>سیب ساده</button>
+        <button>سیب ویژه</button>
+        <button>هات داگ سیب‌زمینی</button>
+      </div>
     </div>
+
+    <!-- بخش نوشیدنی‌ها -->
+    <div class="section">
+      <div class="glass-button">نوشیدنی‌ها</div>
+      <div class="button-grid">
+        <button>زمزم مشکی</button>
+        <button>زمزم زرد</button>
+        <button>ماشعیر تلخ</button>
+        <button>ماشعیر لیمویی</button>
+        <button>دوغ آبعلی</button>
+        <button>سون آپ</button>
+        <button>آب معدنی</button>
+      </div>
+    </div>
+
   </div>
 
 </body>
