@@ -2,22 +2,109 @@
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <title>کافه آلموت پلاس</title>
+  <title>منوی فارسی | Alamoot Plus Café</title>
   <link rel="stylesheet" href="../style.css">
+  <style>
+    body {
+      direction: rtl;
+      font-family: 'Vazir', sans-serif;
+      background-color: #fdf6e3;
+      margin: 0;
+      padding: 0;
+    }
+
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #8b4513;
+    }
+
+    .grid-buttons {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .grid-buttons button {
+      padding: 14px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #d2691e;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .grid-buttons button:hover {
+      background-color: #a0522d;
+    }
+  </style>
 </head>
 <body>
-  <div class="overlay">
-    <h1>به کافه آلموت پلاس خوش آمدید</h1>
-    <p>منوی امروز:</p>
-    <ul>
-      <li>🍳 املت</li>
-      <li>🥚 نیمرو</li>
-      <li>🍖 کباب تابه‌ای</li>
-      <li>🍟 سیب‌زمینی ساده</li>
-      <li>🔥 سیب‌زمینی ویژه</li>
-      <li>💨 قلیان با طعم‌های مختلف</li>
-      <li>🥤 نوشیدنی‌های خنک</li>
-    </ul>
+
+  <!--  بخش قلیان هامون -->
+  <div class="section">
+    <h2>قلیان</h2>
+    <div class="grid-buttons">
+      <button>دوسیب الموت</button>
+      <button>دو سیب شیرین</button>
+      <button>دو سیب نخل</button>
+      <button>دوسیب نعناع</button>
+      <button>دوسیب آلبالو</button>
+      <button>دوسیب شلیل</button>
+      <button>سیب یخ</button>
+      <button>نعناع یخ</button>
+      <button>هندوانه یخ</button>
+      <button>لیمو نعنا</button>
+      <button>پرتغال نعنا</button>
+      <button>پرتغال خامه</button>
+      <button>آدامس دارچین</button>
+      <button>انبه</button>
+      <button>شیر انبه</button>
+      <button>آلبالو</button>
+      <button>آلبالو نعناع</button>
+      <button>انگور</button>
+      <button>انگور نعنا</button>
+      <button>بلوبری</button>
+      <button>مافیا</button>
+    </div>
   </div>
+
+  <!-- بخش خوراک هامون -->
+  <div class="section">
+    <h2>خوراک</h2>
+    <div class="grid-buttons">
+      <button>املت</button>
+      <button>نیمرو</button>
+      <button>کباب تابه‌ای</button>
+      <button>بندری</button>
+      <button>سیب ساده</button>
+      <button>سیب ویژه</button>
+      <button>هات داگ سیب‌زمینی</button>
+    </div>
+  </div>
+
+  <!-- بخش نوشیدنی‌ها -->
+  <div class="section">
+    <h2>نوشیدنی‌ها</h2>
+    <div class="grid-buttons">
+      <button>زمزم مشکی</button>
+      <button>زمزم زرد</button>
+      <button>ماشعیر تلخ</button>
+      <button>ماشعیر لیمویی</button>
+      <button>دوغ آبعلی</button>
+      <button>سون آپ</button>
+      <button>آب معدنی</button>
+    </div>
+  </div>
+
 </body>
 </html>
