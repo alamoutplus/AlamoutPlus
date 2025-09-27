@@ -53,3 +53,29 @@ p {
 .language-buttons button:hover {
   background-color: #a0522d;
 }
+
+
+.info-box {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #f5f5dc;
+  padding: 20px 30px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.8;
+  width: 90%;
+  max-width: 500px;
+}
+
+.info-box a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.info-box a:hover {
+  text-decoration: underline;
+}
