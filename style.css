@@ -31,10 +31,10 @@ p {
 
 .language-buttons button {
   margin: 10px;
-  padding: 12px 24px;
-  font-size: 18px;
+  padding: 24px 48px;
+  font-size: 22px;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   background-color: #8b4513;
   color: white;
   cursor: pointer;
