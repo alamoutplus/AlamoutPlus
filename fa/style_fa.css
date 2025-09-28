@@ -103,3 +103,42 @@ body {
   height: auto;
   filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.4));
 }
+
+
+.language-switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 16px;
+  font-family: 'Titr', sans-serif;
+  font-size: 16px;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.language-switch span {
+  font-weight: bold;
+  color: #f5f5dc;
+}
+
+.language-switch a {
+  padding: 8px 14px;
+  border-radius: 10px;
+  background-color: #ff0073;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.language-switch a:hover {
+  background-color: #e60066;
+  transform: scale(1.05);
+}
