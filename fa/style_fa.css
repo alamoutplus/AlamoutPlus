@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Vazir', sans-serif;
+  direction: rtl;
+  background-image: url('../assets/background.jpg'); /* مسیر تصویر بکگراند */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* کانتینر مرکزی */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  padding: 60px 20px;
+}
+
+/* عنوان بخش‌ها با افکت شیشه‌ای */
+.glass-title {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #f5f5dc;
+  font-size: 26px;
+  font-weight: bold;
+  padding: 14px 28px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin-bottom: 30px;
+}
+
+/* دکمه‌های دو ستونه با رنگ‌های خوانا */
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 14px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.button-grid button {
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.25); /* شیشه‌ای نیمه‌شفاف */
+  color: #f5f5dc; /* کرم روشن برای خوانایی */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.button-grid button:hover {
+  background: rgba(255, 255, 255, 0.6);
+  color: #3e2723; /* قهوه‌ای تیره در حالت هاور */
+  transform: translateY(-2px);
+}
