@@ -1,12 +1,21 @@
+@font-face {
+  font-family: 'Titr';
+  src: url('../fonts/Titr.woff2') format('woff2'),
+       url('../fonts/Titr.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Vazir', sans-serif;
+  font-family: 'Titr', sans-serif;
   direction: rtl;
-  background-image: url('../assets/alamootplus.png'); /* مسیر تصویر بکگراند */
+  background-image: url('../assets/alamootplus.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  color: white;
 }
 
 /* کانتینر مرکزی */
@@ -24,8 +33,8 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  color: #f5f5dc;
-  font-size: 26px;
+  color: white;
+  font-size: 28px;
   font-weight: bold;
   padding: 14px 28px;
   border-radius: 12px;
@@ -33,7 +42,7 @@ body {
   margin-bottom: 30px;
 }
 
-/* دکمه‌های دو ستونه با رنگ‌های خوانا */
+/* دکمه‌های دو ستونه با رنگ صورتی و متن سفید */
 .button-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -48,17 +57,14 @@ body {
   font-weight: bold;
   border: none;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.25); /* شیشه‌ای نیمه‌شفاف */
-  color: #f5f5dc; /* کرم روشن برای خوانایی */
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  background-color: #ff0073;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .button-grid button:hover {
-  background: rgba(255, 255, 255, 0.6);
-  color: #3e2723; /* قهوه‌ای تیره در حالت هاور */
+  background-color: #e60066;
   transform: translateY(-2px);
 }
