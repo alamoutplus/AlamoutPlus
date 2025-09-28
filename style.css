@@ -87,3 +87,17 @@ p {
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
+
+.button-grid button {
+  background: rgba(255, 255, 255, 0.25); /* نیمه‌شفاف شیشه‌ای */
+  color: #f5f5dc; /* کرم روشن برای خوانایی */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-weight: bold;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.button-grid button:hover {
+  background: rgba(255, 255, 255, 0.5);
+  color: #3e2723; /* قهوه‌ای تیره در حالت هاور */
+}
