@@ -1,33 +1,50 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>انتخاب زبان | Alamoot Plus Café</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- title for google console -->
+  <title>کافه قلیان عربی الموت پلاس | قلیان عربی و بهترین کیفیت طعم و خدمات</title>
+
+  <!-- توضیحات متا -->
+  <meta name="description" content="کافه قلیان عربی الموت پلاس بهترین قهوه خانه تهران در کیفیت طعم قلیان و ارائه خدمات با بهترین متریال در شأن مشتریان.">
+
+  <!-- Open Graph برای اشتراک‌گذاری -->
+  <meta property="og:title" content="کافه قلیان عربی الموت پلاس ">
+  <meta property="og:description" content="کافه قلیان عربی الموت پلاس بهترین قهوه خانه تهران در کیفیت طعم قلیان و ارائه خدمات با بهترین متریال در شأن مشتریان.">
+  <meta property="og:image" content="https://alamootplus.ir/assets/logo-alamootplus.png">
+  <meta property="og:url" content="https://alamootplus.ir/">
+  <meta property="og:type" content="website">
+
+  <!-- تنظیمات SEO دیگر -->
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://alamootplus.ir/">
+
+  <!-- استایل -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="overlay">
+  <header class="overlay">
     <h1>Welcome to Alamoot Plus Café</h1>
     <p>لطفاً زبان خود را انتخاب کنید</p>
     <p>Please Select Your Language</p>
-    <div class="language-buttons">
+    <nav class="language-buttons">
       <button onclick="setLanguage('fa')">🇮🇷 فارسی</button>
       <button onclick="setLanguage('en')">🇬🇧 English</button>
       <button onclick="setLanguage('ar')">🇸🇩 العربية</button>
       <button onclick="setLanguage('zh')">🇨🇳 中文</button>
-    </div>
-  </div>
+    </nav>
+  </header>
 
-<div class="info-box">
-  <p>📞 مدیریت: <a href="tel:+989123977097">7097-397-0912</a></p>
-  <p>☎️ تلفن ثابت: <a href="tel:+982188322215">88322215-021</a></p>
-  <p>📍 آدرس: تهران، میدان فردوسی ، ابتدای خبابان رامسر ، پلاک 14</p>
-  <p>📸 اینستاگرام: <a href="https://instagram.com/alamoot_plus" target="_blank">@alamoot_plus</a></p>
-</div>
+  <main class="info-box">
+    <p>📞 مدیریت: <a href="tel:+989123977097">7097-397-0912</a></p>
+    <p>☎️ تلفن ثابت: <a href="tel:+982188322215">88322215-021</a></p>
+    <p>📍 آدرس: تهران، میدان فردوسی، ابتدای خیابان رامسر، پلاک 14</p>
+    <p>📸 اینستاگرام: <a href="https://instagram.com/alamoot_plus" target="_blank">@alamoot_plus</a></p>
+  </main>
 
-
-
-  
   <script>
     function setLanguage(lang) {
       window.location.href = lang + "/index.html";
