@@ -39,20 +39,21 @@ p {
 }
 
 .language-buttons button {
+  font-size: 1.2rem;
+  padding: 12px 24px;
   margin: 8px;
-  padding: 24px 48px;
-  font-size: 18px;
   border: none;
   border-radius: 8px;
-  background-color: #8b4513;
+  background-color: #6b4f3b;
   color: white;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 200px;
+  transition: all 0.3s ease;
 }
 
 .language-buttons button:hover {
-  background-color: #a0522d;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+  background-color: #8b5e3c;
 }
 
 
