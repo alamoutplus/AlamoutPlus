@@ -2,16 +2,113 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alamoot Coffee Catcher</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Coffee Catcher</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #f3e9dc;
+      text-align: center;
+    }
+    h1 {
+      color: #6b4f3b;
+    }
+    #game {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      background: #d2b48c;
+      overflow: hidden;
+      border-top: 4px solid #6b4f3b;
+      border-bottom: 4px solid #6b4f3b;
+    }
+    #cup {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 60px;
+      background: #6b4f3b;
+      border-radius: 50% 50% 0 0;
+    }
+    .bean {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #3e2723;
+      border-radius: 50%;
+    }
+    #score {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      color: #6b4f3b;
+    }
+  </style>
 </head>
 <body>
-  <h1>Alamoot Web Game Center ☕</h1>
-  <div id="game-container">
+  <h1>Coffee Catcher ☕</h1>
+  <div id="game">
     <div id="cup"></div>
   </div>
   <div id="score">Score: 0</div>
-  <script src="game.js"></script>
+
+  <script>
+    const game = document.getElementById("game");
+    const cup = document.getElementById("cup");
+    const scoreDisplay = document.getElementById("score");
+    let score = 0;
+
+    // حرکت فنجون
+    document.addEventListener("keydown", (e) => {
+      const step = 20;
+      const maxLeft = game.clientWidth - cup.offsetWidth;
+      let currentLeft = parseInt(cup.style.left || "50");
+
+      if (e.key === "ArrowLeft") {
+        currentLeft = Math.max(currentLeft - step, 0);
+      } else if (e.key === "ArrowRight") {
+        currentLeft = Math.min(currentLeft + step, maxLeft);
+      }
+
+      cup.style.left = currentLeft + "px";
+      cup.style.transform = "none"; // حذف translateX
+    });
+
+    // ساخت دونه
+    function createBean() {
+      const bean = document.createElement("div");
+      bean.classList.add("bean");
+      bean.style.left = Math.random() * (game.clientWidth - 20) + "px";
+      bean.style.top = "0px";
+      game.appendChild(bean);
+
+      let fall = setInterval(() => {
+        let top = parseInt(bean.style.top);
+        bean.style.top = top + 5 + "px";
+
+        const beanRect = bean.getBoundingClientRect();
+        const cupRect = cup.getBoundingClientRect();
+
+        if (
+          beanRect.bottom >= cupRect.top &&
+          beanRect.left >= cupRect.left &&
+          beanRect.right <= cupRect.right
+        ) {
+          score++;
+          scoreDisplay.textContent = "Score: " + score;
+          bean.remove();
+          clearInterval(fall);
+        }
+
+        if (top > game.clientHeight) {
+          bean.remove();
+          clearInterval(fall);
+        }
+      }, 30);
+    }
+
+    setInterval(createBean, 1000);
+  </script>
 </body>
 </html>
