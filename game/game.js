@@ -5,11 +5,14 @@ let score = 0;
 
 // Move cup left/right
 document.addEventListener("keydown", (e) => {
-  const cupLeft = cup.offsetLeft;
+  const cupLeft = parseInt(cup.style.left) || 0;
+  const step = 20;
+  const maxLeft = gameContainer.offsetWidth - cup.offsetWidth;
+
   if (e.key === "ArrowLeft" && cupLeft > 0) {
-    cup.style.left = cupLeft - 20 + "px";
-  } else if (e.key === "ArrowRight" && cupLeft < gameContainer.offsetWidth - cup.offsetWidth) {
-    cup.style.left = cupLeft + 20 + "px";
+    cup.style.left = Math.max(cupLeft - step, 0) + "px";
+  } else if (e.key === "ArrowRight" && cupLeft < maxLeft) {
+    cup.style.left = Math.min(cupLeft + step, maxLeft) + "px";
   }
 });
 
