@@ -1,16 +1,20 @@
-// پیدا کردن همه دکمه‌هایی که کلاس order-button دارن
 const buttons = document.querySelectorAll(".order-button");
 
-// اضافه کردن رویداد کلیک به هر دکمه
 buttons.forEach(button => {
   button.addEventListener("click", () => {
-    const item = button.getAttribute("data-item"); // گرفتن نام آیتم از data-item
-    const quantity = 1; // فعلاً تعداد رو ۱ در نظر می‌گیریم
+    const item = button.getAttribute("data-item");
 
-    // نمایش پیام تأیید سفارش
-    alert(`✅ سفارش شما برای "${item}" با تعداد ${quantity} ثبت شد.`);
+    // پرسیدن تعداد از مشتری
+    const quantity = prompt(`چند عدد "${item}" می‌خواهید؟`, "1");
 
-    // در مرحله بعدی اینجا سفارش رو به Firebase می‌فرستیم
-    console.log("سفارش ثبت شد:", item, quantity);
+    // بررسی اینکه عدد وارد شده معتبر باشه
+    if (quantity && !isNaN(quantity) && Number(quantity) > 0) {
+      alert(`✅ سفارش شما برای "${item}" با تعداد ${quantity} ثبت شد.`);
+      console.log("سفارش ثبت شد:", item, quantity);
+
+      // در مرحله بعدی اینجا سفارش رو به Firebase می‌فرستیم
+    } else {
+      alert("❌ لطفاً یک عدد معتبر وارد کنید.");
+    }
   });
 });
