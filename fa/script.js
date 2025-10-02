@@ -9,7 +9,7 @@ buttons.forEach(button => {
 
     // بررسی اینکه عدد وارد شده معتبر باشه
     if (quantity && !isNaN(quantity) && Number(quantity) > 0) {
-      alert(`✅ سفارش شما برای "${item}" با تعداد ${quantity} ثبت شد.`);
+      alert(`✅ سفارش شما برای "${item}" با تعداد ${quantity} ثبت شد اما در حال حاضر سرویس سفارش گیری غیر فعال است .`);
       console.log("سفارش ثبت شد:", item, quantity);
 
       // در مرحله بعدی اینجا سفارش رو به Firebase می‌فرستیم
